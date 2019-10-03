@@ -6,8 +6,6 @@ import Shell from './app/Shell';
 import { history } from './app/shared/routing/history';
 import RootStore from './app/shared/stores/Root.store';
 
-import './App.scss';
-
 const rootStore = new RootStore();
 
 const historyAdapter = new HistoryAdapter(rootStore.routerStore, history);

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 
-const PageNotFound = inject('rootStore')(
+const Header = inject('rootStore')(
   observer(
     class extends Component {
       render() {
         return (
-          <div className='PageNotFound'>
-            <h1>Page Not Found</h1>
+          <div className='Header'>
+            <h1>Header</h1>
           </div>
         );
       }
@@ -15,4 +15,4 @@ const PageNotFound = inject('rootStore')(
   )
 );
 
-export default PageNotFound;
+export default Header;

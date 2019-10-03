@@ -4,6 +4,9 @@ import { RouterView } from 'mobx-state-router';
 
 import { viewMap } from './shared/routing/viewMap';
 
+import Header from './features/components/Header.component';
+import Footer from './features/components/Footer.component';
+
 const Shell = inject('rootStore')(
   class extends Component {
     render() {
@@ -13,7 +16,9 @@ const Shell = inject('rootStore')(
 
       return (
         <div className='Shell'>
+          <Header />
           <RouterView routerStore={routerStore} viewMap={viewMap} />
+          <Footer />
         </div>
       );
     }

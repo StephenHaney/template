@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Item title",
+    "description": "This ought to be a very long item description..."
+  },
+  {
+    "id": 2,
+    "title": "Item title",
+    "description": "This ought to be a very long item description..."
+  },
+  {
+    "id": 3,
+    "title": "Item title",
+    "description": "This ought to be a very long item description..."
+  }
+]
