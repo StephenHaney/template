@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import { inject, observer } from 'mobx-react';
+import { observer } from 'mobx-react';
+import withStore from '../../shared/stores/withStore';
 
-const PageHome = inject('rootStore')(
-  observer(
-    class extends Component {
-      render() {
-        return (
-          <div className='PageHome'>
-            <h1>Page Home</h1>
-          </div>
-        );
-      }
-    }
-  )
-);
+class PageHome extends Component {
+  render() {
+    return (
+      <div className='PageHome'>
+        <h1>Page Home</h1>
+      </div>
+    );
+  }
+}
 
-export default PageHome;
+export default withStore(observer(PageHome));

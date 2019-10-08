@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import { inject, observer } from 'mobx-react';
+import { observer } from 'mobx-react';
+import withStore from '../../shared/stores/withStore';
 
-const Footer = inject('rootStore')(
-  observer(
-    class extends Component {
-      render() {
-        return (
-          <div className='Footer'>
-            <h1>Footer</h1>
-          </div>
-        );
-      }
-    }
-  )
-);
+class Footer extends Component {
+  render() {
+    return (
+      <div className='Footer'>
+        <h1>Footer</h1>
+      </div>
+    );
+  }
+}
 
-export default Footer;
+export default withStore(observer(Footer));

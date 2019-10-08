@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import { inject, observer } from 'mobx-react';
+import { observer } from 'mobx-react';
+import withStore from '../../shared/stores/withStore';
 
-const Header = inject('rootStore')(
-  observer(
-    class extends Component {
-      render() {
-        return (
-          <div className='Header'>
-            <h1>Header</h1>
-          </div>
-        );
-      }
-    }
-  )
-);
+class Header extends Component {
+  render() {
+    return (
+      <div className='Header'>
+        <h1>Header</h1>
+      </div>
+    );
+  }
+}
 
-export default Header;
+export default withStore(observer(Header));
