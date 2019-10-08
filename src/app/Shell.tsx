@@ -7,6 +7,7 @@ import { viewMap } from './shared/routing/viewMap';
 import Header from './features/components/Header.component';
 import Footer from './features/components/Footer.component';
 import RootStore from './shared/stores/Root.store';
+import SomeFunctionalComponent from './features/components/SomeFunctional.component';
 
 type ShellProps = {
   rootStore: RootStore;
@@ -19,6 +20,7 @@ class Shell extends Component<ShellProps> {
     return (
       <div className='Shell'>
         <Header />
+        <SomeFunctionalComponent />
         <RouterView routerStore={routerStore} viewMap={viewMap} />
         <Footer />
       </div>
